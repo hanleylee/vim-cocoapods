@@ -18,13 +18,15 @@ let g:POD_MODULE_URL = {
     \ 'module3': 'xxx', 
     \ }
 
-" This part is config keymap for the provided command and maps, you can provide your prefer keymap.
-nmap <silent><buffer> <Leader>pb  <Plug>(CocoaPodsEditBranch)
-nmap <silent><buffer> <Leader>pt  <Plug>(CocoaPodsEditTag)
-nmap <silent><buffer> <Leader>pv  <Plug>(CocoaPodsEditVersion)
-nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
-nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
-nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
+" set this if you don't want any default map
+let g:enableDefaultCocoapodsMap = 0
+" The default map as as below:
+" nmap <silent><buffer> <Leader>pb  <Plug>(CocoaPodsEditBranch)
+" nmap <silent><buffer> <Leader>pt  <Plug>(CocoaPodsEditTag)
+" nmap <silent><buffer> <Leader>pv  <Plug>(CocoaPodsEditVersion)
+" nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
+" nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
+" nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
 ```
 
 ## Usage
@@ -33,19 +35,19 @@ This plugin provide the following Commands & Maps
 
 ### Commands
 
-- `<Plug>(CocoaPodsEditBranch)`: Edit pod git branch
-- `<Plug>(CocoaPodsEditTag)`: Edit pod git tag
-- `<Plug>(CocoaPodsEditVersion)`: Edit pod version
-
-### Maps
-
 - `PodUpdate`: Run `pod update`
 - `PodUpdateNoRepoUpdate`: Run `pod update --no-repo-update`
 - `PodInstall`: Run `pod install`
 
+### Maps
+
+- `<Plug>(CocoaPodsEditBranch)`: Edit pod git branch
+- `<Plug>(CocoaPodsEditTag)`: Edit pod git tag
+- `<Plug>(CocoaPodsEditVersion)`: Edit pod version
+
 ## Dependency
 
-This plugin is built to make my iOS development workflow more efficient, so it use the following plugins that I commonly use:
+This plugin is built to make my iOS development workflow more efficient, so it use the following plugins that I daily use:
 
 - [`vim-repeat`](https://github.com/tpope/vim-repeat)
 - [`asyncrun.vim`](https://github.com/skywind3000/asyncrun.vim)
@@ -53,4 +55,3 @@ This plugin is built to make my iOS development workflow more efficient, so it u
 ---
 
 Please star it if this plugin helps you.
-

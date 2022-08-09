@@ -13,7 +13,7 @@ function! cocoapods#edit_pod_git(type)
     let line_content = getline('.')
     let matched_space = matchstr(line_content, '\zs.\{-}\zepod')
     let matched_pod = matchstr(line_content, "pod '\\zs.\\{-}\\ze'")
-    let pod_url = g:POD_MODULE_URL[matched_pod]
+    let pod_url = g:PodModuleUrl[matched_pod]
 
     if empty(pod_url)
         let pod_url = 'git@github.com:xxx/xxx.git'
