@@ -19,7 +19,7 @@ let g:POD_MODULE_URL = {
     \ }
 
 " set this if you don't want any default map
-let g:enableDefaultCocoapodsMap = 0
+let g:CocoaPodsDefaultMap = 0
 " The default map as as below:
 " nmap <silent><buffer> <Leader>pb  <Plug>(CocoaPodsEditBranch)
 " nmap <silent><buffer> <Leader>pt  <Plug>(CocoaPodsEditTag)

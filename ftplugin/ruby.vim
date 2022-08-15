@@ -9,9 +9,10 @@ endif
 let b:loaded_cocoapods_ftplugin = 1
 
 " MARK: Variable
-if !exists('g:enableDefaultCocoapodsMap')
+if !exists('g:CocoaPodsDefaultMap')
     let g:CocoaPodsDefaultMap = 1
 endif
+" let g:CocoaPodsDefaultMap = get(g:, 'CocoaPodsDefaultMap', 1)
 
 " MARK: Commands
 command! -buffer PodUpdate call cocoapods#execute('pod update')
