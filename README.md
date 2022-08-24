@@ -21,9 +21,9 @@ let g:POD_MODULE_URL = {
 " set this if you don't want any default map
 let g:CocoaPodsDefaultMap = 0
 " The default map as as below:
-" nmap <silent><buffer> <Leader>pb  <Plug>(CocoaPodsEditBranch)
-" nmap <silent><buffer> <Leader>pt  <Plug>(CocoaPodsEditTag)
-" nmap <silent><buffer> <Leader>pv  <Plug>(CocoaPodsEditVersion)
+" nmap <silent><buffer> <Leader>eb  <Plug>(CocoaPodsEditBranch)
+" nmap <silent><buffer> <Leader>et  <Plug>(CocoaPodsEditTag)
+" nmap <silent><buffer> <Leader>ev  <Plug>(CocoaPodsEditVersion)
 " nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
 " nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
 " nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
