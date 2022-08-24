@@ -31,7 +31,7 @@ let g:CocoaPodsDefaultMap = 0
 
 ## Usage
 
-This plugin provide the following Commands & Maps
+This plugin provides the following Commands & Maps
 
 ### Commands
 
@@ -47,11 +47,11 @@ This plugin provide the following Commands & Maps
 
 ## Dependency
 
-This plugin is built to make my iOS development workflow more efficient, so it use the following plugins that I daily use:
+This plugin is built to make my iOS development workflow more efficient, so it uses the following plugins that I commonly use:
 
 - [`vim-repeat`](https://github.com/tpope/vim-repeat)
 - [`asyncrun.vim`](https://github.com/skywind3000/asyncrun.vim)
 
 ---
 
-Please star it if this plugin helps you.
+Please give this plugin a star if it if this plugin helps you.
