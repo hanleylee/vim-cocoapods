@@ -24,6 +24,7 @@ function! s:AddKeyMaps()
         nmap <silent><buffer> <Leader>eb  <Plug>(CocoaPodsEditBranch)
         nmap <silent><buffer> <Leader>et  <Plug>(CocoaPodsEditTag)
         nmap <silent><buffer> <Leader>ev  <Plug>(CocoaPodsEditVersion)
+        nmap <silent><buffer> <Leader>dbm <Plug>(CocoaPodsDirectToMaster)
         nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
         nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
         nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>

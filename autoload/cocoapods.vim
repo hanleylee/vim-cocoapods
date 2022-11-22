@@ -31,6 +31,22 @@ function! cocoapods#edit_pod_git(type)
     startinsert
 endfunction
 
+function! cocoapods#direct_to_branch_master()
+  " pod 'BNCConnector', '0.6.4'#:git => 'git@192.168.138.192:BNC_iOS/BNCConnector.git', :branch => 'Indonesia'
+    let line_num = line('.')
+    let line_content = getline('.')
+    let matched_space = matchstr(line_content, '\zs.\{-}\zepod')
+    let matched_pod = matchstr(line_content, "pod '\\zs.\\{-}\\ze'")
+    let pod_url = g:PodModuleUrl[matched_pod]
+
+    if empty(pod_url)
+        let pod_url = 'git@github.com:xxx/xxx.git'
+    endif
+
+    let final_content = matched_space . "pod '" . matched_pod . "', :git => '" . pod_url . "', :branch => 'master'"
+    call setline(line_num, final_content)
+endfunction
+
 function! cocoapods#edit_pod_version()
     let line_num = line('.')
     let line_content = getline('.')

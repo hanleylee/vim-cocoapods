@@ -17,4 +17,5 @@ command! -buffer PodUpdateNoRepoUpdate call cocoapods#execute('pod update --no-r
 nnoremap <silent> <Plug>(CocoaPodsEditBranch)   :<C-U>call cocoapods#edit_pod_git('branch')<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditBranch)")<CR>
 nnoremap <silent> <Plug>(CocoaPodsEditTag)      :<C-U>call cocoapods#edit_pod_git('tag')<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditTag)")<CR>
 nnoremap <silent> <Plug>(CocoaPodsEditVersion)  :<C-U>call cocoapods#edit_pod_version()<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditVersion)")<CR>
+nnoremap <silent> <Plug>(CocoaPodsDirectToMaster) :<C-U>call cocoapods#direct_to_branch_master()<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsDirectToMaster)")<CR>
 
