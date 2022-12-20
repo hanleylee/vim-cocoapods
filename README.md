@@ -10,24 +10,40 @@ Plug 'hanleylee/vim-cocoapods'
 
 ## Configuration
 
-```vim
-" This property is necessary!
-let g:POD_MODULE_URL = {
-    \ 'module1': 'git@github.com:xxx/xxx.git', 
-    \ 'module2': 'https://github.com/xxx/xxx.git', 
-    \ 'module3': 'xxx', 
-    \ }
+- `g:PodsConfigFile`: pods config file, filetype should be json
 
-" set this if you don't want any default map
-let g:CocoaPodsDefaultMap = 0
-" The default map as as below:
-" nmap <silent><buffer> <Leader>eb  <Plug>(CocoaPodsEditBranch)
-" nmap <silent><buffer> <Leader>et  <Plug>(CocoaPodsEditTag)
-" nmap <silent><buffer> <Leader>ev  <Plug>(CocoaPodsEditVersion)
-" nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
-" nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
-" nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
-```
+    ```vim
+    " This property is necessary!
+    let g:PodsConfigFile = '/path/to/pods_config.json'
+    ```
+
+    And the json file format should be following:
+
+    ```json
+    "pod1": {
+        "url": "git@github.com:xxx/pod1.git",
+        "path": "path/to/pod1"
+    },
+    "pod2": {
+        "url": "git@github.com:xxx/pod2.git",
+        "path": "path/to/pod2"
+    }
+    ```
+
+- `g:CocoaPodsDefaultMap`: set `g:CocoaPodsDefaultMap` to `0` if you don't want any default map
+
+    ```vim
+    let g:CocoaPodsDefaultMap = 0
+    " The default map as as below:
+    " nmap     <silent><buffer> <Leader>eb  <Plug>(CocoaPodsEditBranch)
+    " nmap     <silent><buffer> <Leader>et  <Plug>(CocoaPodsEditTag)
+    " nmap     <silent><buffer> <Leader>ev  <Plug>(CocoaPodsEditVersion)
+    " nmap     <silent><buffer> <Leader>dbm <Plug>(CocoaPodsDirectToMaster)
+    " nmap     <silent><buffer> <Leader>dlp <Plug>(CocoaPodsDirectToLocal)
+    " nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
+    " nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
+    " nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
+    ```
 
 ## Usage
 
@@ -44,6 +60,8 @@ This plugin provides the following Commands & Maps
 - `<Plug>(CocoaPodsEditBranch)`: Edit pod git branch
 - `<Plug>(CocoaPodsEditTag)`: Edit pod git tag
 - `<Plug>(CocoaPodsEditVersion)`: Edit pod version
+- `<Plug>(CocoaPodsDirectToMaster)`: Direct to branch master
+- `<Plug>(CocoaPodsDirectToLocal)`: Direct to local path
 
 ## Dependency
 

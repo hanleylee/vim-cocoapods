@@ -18,4 +18,5 @@ nnoremap <silent> <Plug>(CocoaPodsEditBranch)   :<C-U>call cocoapods#edit_pod_gi
 nnoremap <silent> <Plug>(CocoaPodsEditTag)      :<C-U>call cocoapods#edit_pod_git('tag')<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditTag)")<CR>
 nnoremap <silent> <Plug>(CocoaPodsEditVersion)  :<C-U>call cocoapods#edit_pod_version()<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditVersion)")<CR>
 nnoremap <silent> <Plug>(CocoaPodsDirectToMaster) :<C-U>call cocoapods#direct_to_branch_master()<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsDirectToMaster)")<CR>
+nnoremap <silent> <Plug>(CocoaPodsDirectToLocal) :<C-U>call cocoapods#direct_to_local_path()<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsDirectToLocal)")<CR>
 
