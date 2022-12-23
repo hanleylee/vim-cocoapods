@@ -14,7 +14,7 @@ if !exists('g:CocoaPodsDefaultMap')
 endif
 " let g:CocoaPodsDefaultMap = get(g:, 'CocoaPodsDefaultMap', 1)
 
-if exists('g:PodsConfigFile')
+if exists('g:PodsConfigFile') && file_readable(g:PodsConfigFile)
     let g:PodsConfig = json_decode(join(readfile(g:PodsConfigFile), ''))
 endif
 
