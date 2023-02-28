@@ -43,6 +43,7 @@ Plug 'hanleylee/vim-cocoapods'
     " nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
     " nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
     " nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
+    " nnoremap <silent><buffer> <Leader>pt  :PodTrim2NameBranch<CR>
     ```
 
 ## Usage
@@ -54,6 +55,7 @@ This plugin provides the following Commands & Maps
 - `PodUpdate`: Run `pod update`
 - `PodUpdateNoRepoUpdate`: Run `pod update --no-repo-update`
 - `PodInstall`: Run `pod install`
+- `PodTrim2NameBranch`: Trim pod line to format `pod_name:branch`
 
 ### Maps
 

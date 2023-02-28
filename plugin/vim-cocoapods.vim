@@ -35,4 +35,5 @@ function! s:AddDefaultKeyMaps()
     nnoremap <silent><buffer> <Leader>pu  :PodUpdate<CR>
     nnoremap <silent><buffer> <Leader>pnu :PodUpdateNoRepoUpdate<CR>
     nnoremap <silent><buffer> <Leader>pi  :PodInstall<CR>
+    nnoremap <silent><buffer> <Leader>pt  :PodTrim2NameBranch<CR>
 endfunction

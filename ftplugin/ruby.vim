@@ -12,6 +12,7 @@ let b:loaded_cocoapods_ftplugin = 1
 command! -buffer PodUpdate call cocoapods#execute('pod update')
 command! -buffer PodInstall call cocoapods#execute('pod install')
 command! -buffer PodUpdateNoRepoUpdate call cocoapods#execute('pod update --no-repo-update')
+command! -buffer PodTrim2NameBranch silent call cocoapods#trimPodsToNameAndBranch()
 
 " MARK: Maps
 nnoremap <silent> <Plug>(CocoaPodsEditBranch)   :<C-U>call cocoapods#edit_pod_git('branch')<Bar>silent! call repeat#set("\<lt>Plug>(CocoaPodsEditBranch)")<CR>

@@ -89,3 +89,12 @@ function! cocoapods#edit_pod_version()
     call setpos('.', [buf_num, line_num, len(first_part_with_version)])
     startinsert
 endfunction
+
+function! cocoapods#trimPodsToNameAndBranch()
+    let alltext = getline(1, '$')
+    tabnew
+    call setline('.', alltext)
+    g/#/d " remove all comment lines
+    v/branch/d " remove all non-branch lines
+    %s/^\s*pod '\(.\{-}\)'.*branch => '\(.\{-}\)'/\1:\2/g
+endfunction
